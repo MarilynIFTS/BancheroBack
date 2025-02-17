@@ -1,0 +1,116 @@
+.historia-presentacion{
+    background-image: url(../imgs/historia/historia-6.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 105vh;
+    overflow: hidden;
+}
+
+svg{
+    height: 70%;
+    position: absolute;
+    top: 35%;
+}
+
+.historia-titulo{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    font-size: 9rem;
+    color: #6388bc;
+    text-shadow: 0.4rem 0.4rem 2px #c1cfe4;
+}
+
+.historia{
+    width: 80%;
+    margin: 2rem auto 5rem;
+    color: #6388bc;
+    font-size: 1.5rem;
+}
+
+.div{
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.div div, .div p{
+    width: 45%;
+    background-position: center;
+}
+
+.historia .div div{
+    height: 100%;
+    background-size: cover;
+}
+
+.div-img1{
+    background-image: url(../imgs/historia/historia-1.jpg);
+}
+
+.div-img2{
+    background-image: url(../imgs/historia/historia-2.jpg);
+}
+
+.div-img3{
+    background-image: url(../imgs/historia/historia-3.jpg);
+}
+
+.div-img4{
+    background-image: url(../imgs/historia/historia-4.jpg);
+}
+
+.div-img5{
+    background-image: url(../imgs/historia/historia-5.jpg);
+}
+
+
+@media screen and (max-width: 1200px){
+    .div div, .div p{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 979px){
+    .historia{
+        font-size: 1.2rem;
+    }
+
+    .historia-titulo{
+        bottom: 15%;
+        right: 5%;
+        font-size: 7rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    .historia-titulo{
+        right: 5%;
+        font-size: 6rem;
+    }
+
+    svg{
+        top: 30%;
+    }
+
+    .div{
+        height: 80vh;
+        flex-direction: column;
+    }
+
+    .div div, .div p{
+        width: 100%;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .historia-titulo{
+        font-size: 5rem;
+    }
+
+}

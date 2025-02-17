@@ -1,0 +1,272 @@
+.titles .subtitle{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.galeria-container{
+    display: grid;
+    width: 90%;
+    margin: 2% auto 5%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 40px;
+    position: relative;
+}
+
+.img-galeria, .subir{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: grid;
+}
+
+.galeria-container .subir{
+    opacity: 50%;
+    filter: brightness(40%);
+}
+
+.galeria-container .img-galeria:hover, .subir:hover{
+    cursor: pointer;
+}
+
+.galeria-container div{
+    position: relative;
+}
+
+.galeria-container div::before{
+    content: "Agregar imagen";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.selected-img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-img span, .container-subir span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.selected-img .img-galeria, form{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.selected-img .publisher{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10%;
+    height: 5%;
+    width: 70%;
+    gap: 2%;
+}
+
+.publisher div{
+    height: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.publisher-name{
+    color: #fff;
+}
+
+.publisher .publisher-img{
+    display: block;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    padding: 0.5rem;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.publisher p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.error{
+    color: rgb(202, 1, 1);
+    padding-top: 1rem;
+    display: none;
+}
+
+/*Estilos de el formulario subir*/
+
+.container-subir{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.container-subir form{
+    background-color: aliceblue;
+    width: 55%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    margin-top: 5%;
+    padding: 5rem 1rem;
+    text-align: center;
+    color: #0564b1;
+}
+
+#input-img{
+    display: none;
+}
+
+.icon-subir{
+    max-width: 25rem;
+    height: 85%;
+    margin: auto;
+    border: 2px dashed #bbb5ff;
+    background-image: linear-gradient(#ffffff00, #0564b11d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-subir:hover{
+    cursor: pointer;
+}
+
+.icon-subir img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#input-text{
+    border: none;
+    border-bottom: 2px solid #0564b1;
+    background-color: transparent;
+    margin-left: 0.5rem;
+    padding: 0.2rem;
+    font-size: 1rem;
+}
+
+#input-text:focus{
+    outline: none;
+}
+
+.btn-subir{
+    background-color: #0563B1;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #0563B1;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    margin: 2.5rem 0 0 0;
+    width: 60%;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.btn-subir:hover{
+    background-color: #fff;
+    color: #0563B1;
+}
+
+/*Galeria Admin*/
+
+.btn-trash{
+    position: absolute;
+    bottom: 5%;
+    right: 1%;
+    cursor: pointer;
+    height: 10%;
+    border-radius: 100%;
+    background-color: rgb(203, 2, 2);
+}
+
+
+.btn-trash .img-trash{ 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10%;
+}
+
+@media screen and (max-width: 1200px){
+    .selected-img .img-galeria, form{
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 979px){
+
+}
+
+@media screen and (max-width: 768px){
+    .selected-img .img-galeria, form{
+        width: 90%;
+        height: 70%;
+    }
+
+    .publisher p{
+        font-size: 1rem;
+    }
+    
+.selected-img .publisher{
+    bottom: 30%;
+    width: 80%;
+}
+
+}
+
+@media screen and (max-width: 480px){
+    .container-subir form{
+        width: 85%;
+        height: 80%;
+    }
+
+    .selected-img .publisher{
+        bottom: 40%;
+        width: 90%;
+    }
+}

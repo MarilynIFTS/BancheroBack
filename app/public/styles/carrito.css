@@ -1,0 +1,225 @@
+.summary-title{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.summary-container{
+    min-height: 70vh;
+    width: 90%;
+    margin: auto;
+}
+
+
+/*Items*/
+.line{
+    display: block;
+    height: 1px;
+    width: 55%;
+    background-color: rgb(180, 180, 180);
+    margin: auto;
+}
+
+.items{
+    margin: 5% auto;
+}
+
+.item{
+    width: 60%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% auto;
+}
+
+.item-img-cont{
+    height: 100%;
+    width: 20%;
+}
+
+.item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.description{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 1% 4%;
+    border-radius: 45%;
+    box-shadow: 1px 1px 0.5rem rgb(182, 181, 181);
+}
+
+.dish, .price{
+    color: rgb(95, 95, 95);
+    font-weight: 500;
+}
+
+.less, .plus{
+    display: inline-block;
+    font-size: 2rem;
+    padding: 5% 15%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.counter-number{
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.counter-number:focus{
+    outline: none;
+}
+
+.larger-line{
+    display: block;
+    height: 1px;
+    width: 70%;
+    background-color: rgb(152, 151, 151);
+    margin:auto;
+}
+
+/*Summary*/
+.summary{
+    width: 35%;
+    margin: 2% auto 5%;
+}
+
+.summary .line{
+    margin: 2% auto;
+    width: 90%;
+}
+
+.detail-summary{
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-summary h5{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 4% 0;
+    color: rgb(63, 63, 63);
+}
+
+.detail-summary h5 span{
+    font-weight: 600;
+}
+
+.buy{
+        display: inline-block;
+        color: white;     
+        background-color: #0563B1;
+        border: none;
+        border-radius: 0.2rem;
+        font-size: 1.2rem;
+        border: 1px solid #0563B1;
+        padding: 0.5rem;
+        transition: all 0.2s;
+        margin: 5% 0 0 20%;
+}
+
+.buy:hover{
+    background-color: white;
+    color: #0563B1;
+    cursor: pointer;
+}
+
+.carrito-container{
+    position: relative;
+}
+
+.cantidad-carrito{
+    display: none;
+    position: absolute;
+    left: 70%;
+    bottom: 10%;
+    background-color: #bedbf2;
+    border-radius: 100%;
+    padding: 10% 20%;
+}
+
+@media screen and (max-width: 768px){
+    .item{
+        width: 90%;
+        margin: 4% auto;
+    }
+
+    .summary{
+        width: 55%;
+        margin: 2% auto 5%;
+    }
+
+    .larger-line, .line{
+        margin: auto;
+    }
+
+    .description{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .summary-container, .summary-title{
+        margin: 10% auto;
+    }
+
+    .summary-title{
+        margin: 10% auto;
+        font-size: 1.4rem;
+    }
+
+    .less, .plus{
+        font-size: 1.4rem;
+    }
+
+    .item{
+        width: 100%;
+        margin: 6% auto;
+    }
+
+    .summary{
+        width: 70%;
+        margin: 2% auto 5%;
+    }
+
+    .larger-line, .line{
+        margin: auto;
+    }
+
+    .detail-summary h5{
+        font-size: 1rem;
+        margin: 6% 0;
+    }
+
+    .buy, .dish, .price{
+        font-size: 1rem;
+    }
+
+    .less, .plus{
+        padding: 2% 5%;
+    }
+
+    .counter-menu{
+        padding: 2% 0;
+        height: 95%;
+    }
+}

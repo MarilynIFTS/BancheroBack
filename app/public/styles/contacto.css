@@ -1,0 +1,137 @@
+main{
+    padding-top: 4rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title{
+    display: inline-block;
+    background-color: #0563B1;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 3.5rem;
+}
+
+.subtitle{
+    font-size: 2.2rem;
+    color: #0563B1;
+    padding: 2% 5%;
+}
+
+.sucursales-container{
+    display: flex;
+    width: 90%;
+    margin: 4% auto;
+    justify-content: space-between;
+}
+
+.sucursal{
+    display: flex;
+}
+
+.sucursal div{
+    color: #0563B1;
+}
+
+.sucursal span{
+    font-weight: bold;
+}
+
+iframe{
+    border: none;
+    width: 90%;
+    border-radius: 2rem;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    padding: 0.4rem;
+    font-size: 1rem;
+}
+
+.line{
+    display: none;
+}
+
+main .form{
+    background-color: #b6c2d9;
+    margin: 4rem auto;
+    width: 40%;
+    padding: 1rem 2rem;
+}
+
+main .form-title{
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px){
+    .sucursales-container{
+        flex-direction: column;
+        width: 60%;
+    }
+
+    .sucursal {
+        padding: 7% 0;
+        justify-content: space-between;
+    }
+
+    .line{
+        display: block;
+        width: 80%;
+        height: 1px;
+        background-color: #0563B1;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 979px){
+
+    .sucursales-container{
+        width: 80%;
+    }
+
+    .map{
+        width: 40%;
+    }
+
+    .table{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .page-title{
+        font-size: 2.5rem;
+    }
+
+    .subtitle{
+        font-size: 2rem;
+    }
+
+    .sucursales-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .sucursal{
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
+
+    .map{
+        flex-direction: column-reverse;
+        padding-bottom: 7%;
+        width: 80%;
+    }
+}

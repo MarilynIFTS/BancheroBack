@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Banchero</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/historia.css">
+</head>
+<body>
+    <header>
+            <img id="logo-nav" src="imgs/logoBanchero.png" alt="logo">
+            <nav class="nav-menu">
+                <ul id="nav-list">
+                    <li><a href="inicio">Inicio</a></li>
+                    <li><a href="menu">Menú</a></li>
+                    <li><a href="reservar">Reservar</a></li>
+                    <li><a href="galeria">Galería</a></li>
+                    <li><a href="historia">Historia</a></li>
+                    <li><a href="contacto">Contacto</a></li>
+                </ul>
+        </nav>
+        <div id="user-controls">
+            <img alt="carrito" id="profile-pic">
+            <div class="user-options">
+                <h4 class="user-name"></h4>
+                <button class="btn-edit" href="editarPerfil"><a href="editarPerfil">Editar perfil</a><img src="imgs/icon-edit.svg" alt="edit icon"></button>
+                <button class="btn-cerrar"><a>Cerrar sesión</a><img src="imgs/icon-cerrar-sesion.svg" alt="edit icon"></button>
+            </div>
+            <a id="btn-login" href="login">Login</a>
+            <a class="btn-carrito" href="carrito"><img src="imgs/carrito.png" alt="carrito" id="logo-carrito"></a>
+            <button id="btn-menu"><img src="/imgs/iconizer-menu.svg" alt=""></button>
+        </div>
+    </header>
+    <main>
+       <section class="historia-presentacion">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,224L1440,32L1440,320L0,320Z"></path>
+          </svg>
+          <h1 class="historia-titulo">Historia</h1>
+       </section>
+       <section class="historia">
+        <p>En lo que respecta a la historia de la pizza en Argentina, el apellido Banchero siempre estuvo presente. En 1893 el genovés don Agustín Banchero llegó a Buenos Aires en 1893 y se asentó en La Boca junto a su familia. Ahí se desarrolló en el mundo de la panadería con su propio local, Riachuelo y su apellido fue haciéndose conocido en las calles boquenses. <br>
+            Su hijo, Juan, aprendió el oficio y en 1932 abrió su pizzería, Rancho Banchero, en la esquina de Suárez y la avenida Almirante Brown. El proyecto también contaba con el apoyo de sus hijos, Antonio y Agustín, más conocido como Tito.  Al principio era un local chico con solo una barra donde los clientes se sentaban para comer al paso.</p>
+        <div class="div">
+            <div class="div-img3"></div>
+            <div class="div-img2"></div>
+        </div>
+        <p>Si bien nació y creció en La Boca, el emprendimiento se popularizó después de su aterrizaje en avenida Corrientes en 1967. La noche porteña y el boom del teatro de revista le dieron un mayor impulso a su sucursal de Corrientes y Talcahuano. Luego abrieron una segunda base a tres cuadras bautizada Don Tito, en homenaje a uno de los gestores del proyecto.</p>
+        <div class="div">
+            <p class="italica">
+                "En los 50 cuando jugaba Boca teníamos que cerrar las puertas, se llenaba. Nadie te afanaba y todos garpaban. Con los carnavales lo mismo. Esto era un loquero de gente"
+Hugo Banchero, nieto del fundador del negocio.
+            </p>
+            <div class="div-img1">
+            </div>
+        </div>
+        <p>
+            La pizzería contaba con cinco hornos que despachaban pizza y faina constantemente. Sin embargo, la estrella del menú era un invento de Juan Banchero que hoy se convirtió en clásico de las pizzerías porteñas: la fugazzetta. En realidad, la fugazza era un típico plato genovés y Banchero un día decidió agregarle queso cuartirolo porque la veía muy seca.
+        </p>
+        <div class="div">
+            <div class="div-img5"></div>
+            <div class="div-img4"></div>
+        </div>
+        <p>Ya pasaron más de 90 años desde su fundación y la compañía aun continua en manos de la familia. Hugo Banchero controla el local original en La Boca, mientras que la cuarta generación se encarga del resto. Además de los tres ya mencionados cuentan con una sucursal en Pilar y en agosto de 2019 abrieron su primera sede internacional con su pizzería ubicada en Miami Beach.</p>
+       </section>
+
+    </main>
+    <footer>
+        <div class="sucurales-footer">
+                <ul>
+                    <li><h5><span>Sucursales</span></h5></li>
+                    <li><h5>Av. Almte. Brown 1220</h5></li>
+                    <li><h5>av. Corrientes 1300</h5></li>
+                </ul>
+                <ul>
+                    <li><h5><span>Teléfonos</span></h5></li>
+                    <li><h5>011 4301-1406</h5></li>
+                    <li><h5>011 4382-3353</h5></li>
+                </ul>
+        </div>
+        <span class="footer-line"></span>
+        <div class="icons-footer">
+            <div class="logo-footer"><img src="imgs/bancheroFooter.png" alt="logo Banchero"></div>
+            <div class="social">
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="imgs/icon-facebook.svg" alt=""></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="imgs/icon-whatsapp.svg" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="imgs/icon-instagram.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+main{
+    padding-top: 4rem;
+    background-color: #bedbf2;
+}
+
+h2{
+    display: inline-block;
+    background-color: #0563B1;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 3.5rem;
+}
+
+.menu-container{
+    width: 70%;
+    margin: auto;
+    padding: 1% 5%;
+    background-color: white;
+}
+
+.plato-form{
+    width: 100%;
+}
+
+.dish-img{
+    width: 100%;
+    height: 15rem;
+    background-color: #0563B1;
+}
+
+.dish-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dish-title{
+    font-size: 2rem;
+    background-color: #0563B1;
+    color: white;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+.dish{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    gap: 4%;
+}
+
+.data-container{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.dish-section{
+    margin: 5% auto;
+}
+
+.dish-section div{
+    display: flex;
+}
+
+.dish-section .btn-container{
+    align-items: center;
+}
+
+.btn-trash-categ{
+    width: 6%;
+    height: 6%;
+    border-radius: 100%;
+    padding: 1%;
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+.btn-trash-categ img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description, .price{
+    font-size: 1.4rem;
+}
+
+.price{
+    margin-left: auto;
+    padding-right: 10%;
+}
+
+.abm-container-dish{
+    display: flex;
+    width: 20%;
+    height: 90%;
+    gap: 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-trash-dish, .btn-edit-dish{
+    height: 90%;
+    object-fit: contain;
+    padding: 0.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.abm-container-dish img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.input-list{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.plato-form{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+}
+
+.categoria-form{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 5fr 1fr;
+}
+
+#btn-add-dish, #btn-add-category{
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #0563B1;
+    color: white;
+    border: 1px solid #0563B1;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+.add-chart, .ir-carrito{
+    color: white;     
+    background-color: #0563B1;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    border: 1px solid #0563B1;
+    padding: 0 0.5rem;
+    transition: all 0.2s;
+    height: 70%;
+}
+
+.add-chart:hover, .ir-carrito:hover{
+    background-color: white;
+    color: #0563B1;
+    cursor: pointer;
+}
+/*Menu Admin*/
+
+.subtitle{
+    font-size: 1.5rem;
+    color: #0563B1;
+}
+
+input{
+    padding: 1.5%;
+    font-size: 0.9rem;
+}
+
+select{
+    padding: 1.5%;
+}
+
+.input-list{
+    margin-bottom: 5%;
+}
+
+#input-name, #input-price{
+    margin-right: 5%;
+}
+
+.file-label{
+    font-size: 0.9rem;
+    color: white;
+    background-color: #0563B1;
+    padding: 2%;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+#sel-img{
+    width: 45%;
+    font-size: 0.9rem;
+}
+
+.file{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 18%;
+    width: 100%;
+    gap: 2%;
+}
+
+.file input[type="file"]{
+    display: inline-block;
+    font-size: 1rem;
+}
+
+input[type="file"]::file-selector-button{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+}
+
+@media screen and (max-width: 979px){
+    .btn-trash-categ{
+        width: 10%;
+        height: 10%;
+    }
+
+    .plato-form{
+        grid-template-rows: 3fr;
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-form{
+        grid-template-rows: 3fr;
+        grid-template-columns: 1fr;
+    }
+
+    input, select{
+        margin-top: 2%;
+        width: 100%;
+    }
+
+    .abm-container-dish{
+        width: 30%;
+    }
+
+    .btn-trash-dish, .btn-edit-dish{
+        height: 80%;
+    }
+
+    .dish-title{
+        font-size: 1.6rem;
+    }
+
+    .data-container{
+        flex-direction: column;
+    }
+
+    .description, .price{
+        font-size: 1.2rem;
+        white-space: nowrap;
+        overflow-wrap: break-word;
+        text-align: left;
+        margin: 0;
+    }
+
+    .dish .counter-menu{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .menu-container{
+        width: 80%;
+    }
+
+    .dish .counter-menu{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    main{
+        width: 100%;
+    }
+    .menu-container{
+        width: 90%;
+    }
+
+    .dish-title{
+        font-size: 1.5rem;
+    }
+
+    .data-container{
+        justify-content: center;
+    }
+
+    .description, .price{
+        font-size: 1rem;
+    }
+
+    .add-chart, .ir-carrito{
+        font-size: 0.9rem;
+    }
+
+    .abm-container-dish{
+        height: 100%;
+    }
+
+    .btn-trash-dish, .btn-edit-dish{
+        height: 50%;
+    }
+
+    .dish{
+        padding: 0;
+    }
+
+    .dish div{
+        flex-direction: column;
+    }
+
+    .dish .price{
+        margin-left: 0;
+    }
+
+    .dish-img{
+        height: 5rem;
+    }
+
+    .dish-section{
+        margin: 15% auto;
+    }
+
+    .dish .counter-menu{
+        width: 20%;
+    }
+}

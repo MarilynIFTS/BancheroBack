@@ -1,0 +1,672 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.error, .sesion{
+    color: rgb(202, 1, 1);
+    padding-top: 1rem;
+    display: none;
+}
+
+/*header */
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 2rem;
+    background: rgb(131,130,147);
+background: linear-gradient(0deg, rgba(131,130,147,0.13497899159663862) 0%, rgba(255,255,255,1) 7%);
+z-index: 3;
+}
+
+#logo-nav{
+    max-width: 5rem;
+    padding: 0.2rem;
+}
+
+#btn-menu{
+    display: none;
+    order: 3;
+}
+
+#btn-menu img{
+    max-width: 2.2rem;
+}
+
+#user-controls{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: center;
+    order: 1;
+}
+
+#user-controls #btn-login{
+    display: block;
+    color: white;     
+    background-color: #0563B1;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    border: 1px solid #0563B1;
+    padding: 0.5rem;
+    transition: all 0.2s;
+}
+
+#user-controls #btn-login:hover{
+    background-color: white;
+    color: #0563B1;
+    cursor: pointer;
+}
+
+/*logged*/
+
+.user-options{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 15%;
+    height: 20vh;
+    background-color: #fff;
+    right: 1.5%;
+    top: 85%;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 7% 0;
+}
+
+header .user-menu-options{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 15vh;
+    background-color: #fff;
+    top: 60%;
+    right: 20%;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 7% 0;
+    gap: 1rem;
+}
+
+header #user-controls .mostrar{
+    display: flex;
+}
+
+.user-options button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    width: 70%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+}
+
+.user-menu-options button{
+    padding: 0.5rem 1rem;
+}
+
+.btn-trash, .btn-cerrar, .btn-trash-categ, .btn-trash-dish{
+    background-color: rgb(232, 3, 3);
+}
+
+.btn-edit, .btn-edit-dish{
+    background-color: #0564b1;
+}
+.btn-edit a, .btn-cerrar a{
+    color: #fff;
+}
+
+.btn-cerrar:hover, .btn-edit:hover, .btn-trash-categ:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.user-options .btn-edit img{
+    width: 38%;
+    height: 38%;
+}
+
+
+.user-options img{
+    width: 40%;
+    height: 40%;
+    object-fit: contain;
+}
+
+#profile-pic, #photo-profile, .publisher-name{
+    display: none;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    padding: 0.5rem;
+    z-index: 1;
+    object-fit: cover;
+}
+
+#photo-profile{
+    display: block;
+    margin: auto;
+}
+
+#profile-pic:hover{
+    cursor: pointer;
+}
+
+#logo-carrito{
+    order: 2;
+    max-width: 2.5rem;
+    z-index: 10;
+}
+
+/*Nav btn effect */
+.nav-menu {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+#nav-list {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20%;
+  }
+#nav-list li {
+    display: inline-block;
+  }
+#nav-list a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #0563B1;
+    font-weight: 600;
+  }
+
+  #nav-list button a{
+    color: #fff;
+  }
+#nav-list li a,
+#nav-list li a:after,
+#nav-list li a:before {
+    transition: all .2s;
+  }
+#nav-list li a:hover {
+    color: #0563B1;
+  }
+
+#nav-list li a{
+  position: relative;
+}
+#nav-list li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #0563B1;
+  height: 2px;
+}
+
+#nav-list li a:hover:after {
+  width: 80%;
+}
+
+/*Main */
+
+main{
+    padding-top: 4.5rem;
+}
+
+h2{
+    font-family: "Bebas Neue", system-ui;
+    font-size: 3rem;
+    color: #0563B1;
+}
+
+h4{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #0563B1;
+    font-weight: 400;
+}
+
+h4 span{
+    font-style: italic;
+}
+
+button{
+    border: none;
+}
+
+/*Presentacion */
+#presentation{
+    display: flex;
+    justify-content: center;
+    height: 96vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../imgs/presentation.jpg);
+    background-size: cover;
+}
+
+#presentation img{
+    margin: auto;
+}
+
+/*Sobre Nosotros */
+
+#sobre-nosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: auto;
+    height: 65vh;
+}
+
+#sobre-nosotros img{
+    width: 25%;
+    border-radius: 100%;
+}
+
+#sobre-nosotros div{
+    margin-left: 2rem;
+}
+
+/*Reserva section */
+
+#reserva{
+display: flex;
+align-items: center;
+background-color: #b6c2d9;
+height: 50vh;
+}
+
+#reserva div{
+    width: 50%;
+}
+
+.reserva-img{
+    height: 100%;
+    background-image: url(../imgs/reservar.png);
+    background-size: cover;
+}
+
+#reserva div{
+    text-align: center;
+    padding: 0 4%;
+}
+
+#reserva h4{
+    font-size: 1.6rem;
+}
+
+#btn-hacer-reserva{
+    display: inline-block;
+    color: white;
+    background-color: #0563B1;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    border: 1px solid #0563B1;
+    padding: 0.7rem;
+    transition: all 0.2s;
+    margin: 2rem;
+}
+
+#btn-hacer-reserva:hover{
+    background-color: white;
+    color: #0563B1;
+    cursor: pointer;
+}
+
+/*Pedir online */
+#pedir{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    height: 110vh;
+    width: 70%;
+}
+
+/*swiper slider */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: rgb(48, 47, 47);
+    color: wheat;
+    overflow: hidden;
+}
+
+.swiper{
+    width: 100%;
+    padding: 50px 0;
+}
+
+.swiper-slide{
+    position: relative;
+    width: 320px;
+    aspect-ratio: 3/4;
+    border-radius: 14px;
+    border: 1px solid rgba(118, 116, 116, 0.633);
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: inherit;
+    object-fit: cover;
+    user-select: none;
+}
+
+.title {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: max-content;
+    text-align: center;
+    padding: 10px 18px;
+    background: rgba(46, 39, 39, 0.3);
+    border-radius: 8px;
+    border: 2px solid rgba(68, 68, 68, 0.614);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.5s linear;
+}
+
+main section .page-title{
+    font-size: 3;
+}
+
+.title span{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/*footer */
+footer{
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0563B1;
+    padding: 2rem 4rem;
+    margin: auto;
+}
+.sucurales-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.sucurales-footer li{
+    color: white;
+    margin-top: 0.2rem;
+    font-weight: 400;
+}
+
+.sucurales-footer li span{
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.footer-line{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: auto;
+}
+
+.icons-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+}
+
+.icons-footer img{
+    height: 75%;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+}
+
+@media screen and (max-width: 1200px){
+    /*header */
+    #nav-list {
+        margin: 0 15%;
+      }
+
+      /*footer */
+
+      .social{
+        width: 20%;
+      }
+}
+
+@media screen and (max-width: 979px){
+    /*header */
+    #nav-list {
+        margin: 0 5%;
+      }
+
+      #nav-list a, #nav-list button a{
+        font-size: 0.9rem;
+      }
+
+      #user-controls #btn-login{
+        font-size: 0.9rem;
+      }
+
+      /*footer */
+
+      .icons-footer{
+        height: 20%;
+    }
+
+    .sucurales-footer{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    h2{
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    
+    #reserva h4, h4{
+        font-size: 1.1rem;
+    }
+    
+
+    /*header */
+
+    .nav-menu{
+        position: absolute;
+        display: none;
+        top: 4.2rem;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 95vh;
+    }
+
+    .nav-menu.mostrar{
+        display: block;
+    }
+    
+    #nav-list{
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        height: 60%;
+    }  
+
+    #nav-list #btn-login{
+        color: white;     
+    background-color: #0563B1;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+    border: 1px solid #0563B1;
+    padding: 0.7rem;
+    transition: all 0.2s;
+}
+
+#nav-list #btn-login:active{
+    background-color: white;
+    color: #0563B1;
+    cursor: pointer;
+}
+#nav-list a{
+    font-size: 1.2rem;
+}
+
+#nav-list li a:hover {
+    color: none;
+  }
+#nav-list li a:hover:after {
+  width: 0;
+}
+
+#nav-list li a:active {
+    color: #0563B1;
+  }
+#nav-list li a:active:after {
+  width: 80%;
+}
+
+
+#btn-menu{
+    display: block;
+    background-color: white;
+}
+
+
+/*presentacion */
+#presentation img{
+    width: 100%;
+}
+
+/*Sobre Nosotros */
+
+#sobre-nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#sobre-nosotros img{
+    width: 42%;
+    margin-bottom: 8%;
+}
+
+#sobre-nosotros div{
+    margin-left: 2rem;
+}
+
+/*footer */
+.social{
+    width: 30%;
+}
+
+.sucurales-footer{
+    width: 100%;
+    margin-right: 5%;
+}
+
+}
+
+@media screen and (max-width: 480px){
+
+    /*menu user options*/
+    header .user-menu-options{
+        width: 70%;
+        right: 15%;
+    }
+
+    /*Sobre nosotros */
+    #sobre-nosotros img{
+        width: 50%;
+    }
+
+    /*reserva */
+    #reserva{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-color: #b6c2d9;
+        height: 60vh;
+        }
+        
+    #reserva div{
+            width: 100%;
+        }
+        
+    .reserva-img{
+            height: 100%;
+            background-image: url(../imgs/reservar.png);
+            background-size: cover;
+        }
+        
+    #reserva div{
+            text-align: center;
+        }
+
+    /*footer */
+    footer{
+        padding: 1rem 2rem;
+        height: 25vh;
+    }
+
+    .sucurales-footer li{
+        font-size: 0.9rem;
+    }
+    .sucurales-footer li span{
+        font-size: 1rem;
+    }
+
+    .social{
+            width: 40%;
+        }
+
+    .icons-footer{
+        height: 15%;
+    }
+        
+}

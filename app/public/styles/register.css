@@ -1,0 +1,34 @@
+.notificaciones .form-label{
+    margin-left: 1rem;
+}
+
+.notificaciones input[type="checkbox"]{
+    margin-top: 1rem;
+}
+
+.file-label{
+    font-size: 1rem;
+    color: white;
+    background-color: #0563B1;
+    padding: 4%;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.form .file{
+    left: 18%;
+}
+
+.file input[type="file"]{
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+input[type="file"]::file-selector-button{
+    display: none;
+}
+
+@media screen and (max-width: 480px){
+}

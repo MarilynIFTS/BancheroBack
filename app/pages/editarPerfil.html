@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Banchero</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/register.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <header>
+            <img id="logo-nav" src="imgs/logoBanchero.png" alt="logo">
+            <nav class="nav-menu">
+                <ul id="nav-list">
+                    <li><a href="inicio">Inicio</a></li>
+                    <li><a href="menu">Menú</a></li>
+                    <li><a href="reservar">Reservar</a></li>
+                    <li><a href="galeria">Galería</a></li>
+                    <li><a href="historia">Historia</a></li>
+                    <li><a href="contacto">Contacto</a></li>
+                </ul>
+        </nav>
+        <div id="user-controls">
+            <img alt="carrito" id="profile-pic">
+            <div class="user-options">
+                <h4 class="user-name"></h4>
+                <button class="btn-edit" href="editarPerfil"><a href="editarPerfil">Editar perfil</a><img src="imgs/icon-edit.svg" alt="edit icon"></button>
+                <button class="btn-cerrar"><a>Cerrar sesión</a><img src="imgs/icon-cerrar-sesion.svg" alt="edit icon"></button>
+            </div>
+            <a id="btn-login" href="login">Login</a>
+            <a class="btn-carrito" href="carrito"><img src="imgs/carrito.png" alt="carrito" id="logo-carrito"></a>
+            <button id="btn-menu"><img src="/imgs/iconizer-menu.svg" alt=""></button>
+        </div>
+    </header>
+    <main>
+        <form class="form edit-profile">
+            <h2 class="form-title">Edición de perfil</h2>
+            <div class="form-container">
+                <div class="form-group">
+                    <input type="text" id="name" class="form-input" name="name" placeholder="">
+                    <label for="name" class="form-label name">Nombre:</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" class="form-input" name="email" placeholder="">
+                    <label for="email" class="form-label email">Email:</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="phone" class="form-input" name="phone" placeholder="">
+                    <label for="phone" class="form-label phone">Telefono:</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" class="form-input" name="password" placeholder="">
+                    <label for="password" class="form-label password">Contraseña:</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="conf-password" class="form-input" name="passwordconf" placeholder="">
+                    <label for="conf-password" class="form-label password">Confirmar contraseña:</label>
+                </div>
+                <div class="form-group photo">
+                    <img alt="carrito" id="photo-profile">
+                </div>
+                <div class="form-group file">
+                    <label for="sel-img" class=" file-label">Seleccione otra foto de perfil</label>
+                    <input type="file" id="sel-img" accept="image/*" name="profilepic" class="" placeholder="">
+                </div>
+                <div class="form-group notificaciones">
+                    <input type="checkbox" id="notificaciones" name="notifications" placeholder="" value="1">
+                    <label for="notificaciones" class="form-label">Quiero recibir notificaciones de ofertas y novedades</label>
+                </div>
+            </div>
+            <p class="error">Error al editar perfil</p>
+            <input type="submit" class="form-submit" value="Actualizar perfil">
+            <a href="login.html" class="form-link">Ya tengo una cuenta</a>
+        </form>
+    </main>
+    <footer>
+        <div class="sucurales-footer">
+                <ul>
+                    <li><h5><span>Sucursales</span></h5></li>
+                    <li><h5>Av. Almte. Brown 1220</h5></li>
+                    <li><h5>av. Corrientes 1300</h5></li>
+                </ul>
+                <ul>
+                    <li><h5><span>Teléfonos</span></h5></li>
+                    <li><h5>011 4301-1406</h5></li>
+                    <li><h5>011 4382-3353</h5></li>
+                </ul>
+        </div>
+        <span class="footer-line"></span>
+        <div class="icons-footer">
+            <div class="logo-footer"><img src="/imgs/bancheroFooter.png" alt="logo Banchero"></div>
+            <div class="social">
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="imgs/icon-facebook.svg" alt=""></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="imgs/icon-whatsapp.svg" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="imgs/icon-instagram.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/editarPerfil.js"></script>
+    </body>
+</html>

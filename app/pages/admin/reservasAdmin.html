@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Banchero</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/reservasAdmin.css">
+    <link rel="stylesheet" href="styles/contactoAdmin.css">
+</head>
+<body>
+    <header>
+            <img id="logo-nav" src="imgs/logoBanchero.png" alt="logo">
+            <nav class="nav-menu">
+                <ul id="nav-list">
+                    <li><a href="inicioAdmin">Inicio</a></li>
+                    <li><a href="menuAdmin">Menú</a></li>
+                    <li><a href="reservasAdmin">Reservas</a></li>
+                    <li><a href="usuariosAdmin">Usuarios</a></li>
+                    <li><a href="galeriaAdmin">Galería</a></li>
+                    <li><a href="contactoAdmin">Contacto</a></li>
+                </ul>
+        </nav>
+        <div id="user-controls">
+            <img alt="carrito" id="profile-pic">
+            <div class="user-options">
+                <h4 class="user-name"></h4>
+                <button class="btn-edit" href="editProfile.html">Editar perfil<img src="imgs/icon-edit.svg" alt="edit icon"></button>
+                <button class="btn-cerrar">Cerrar sesión<img src="imgs/icon-cerrar-sesion.svg" alt="edit icon"></button>
+            </div>
+            <a id="btn-login" href="login">Login</a>
+            <button id="btn-menu"><img src="/imgs/iconizer-menu.svg" alt=""></button>
+        </div>
+    </header>
+    <main class="main-reservarform">
+        <section>
+            <h2 class="page-title">Reservas</h2>
+            <form class="form reservar">
+                <h2 class="form-title">Modificar Reserva</h2>
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="sucursal"></label>
+                        <select id="sucursal" name="sucursal" class="form-input">
+                            <option value="seleccione">Seleccione una sucursal</option>
+                            <option value="San Nicolas">San Nicolás</option>
+                            <option value="La Boca">La Boca</option>
+                        </select>
+                    </div>
+                    <div class="form-group fecha">
+                        <label for="fecha" class="form-label">Fecha:</label>
+                        <input class="form-input" type="date" id="fecha" name="date">
+                    </div>
+                    <div class="form-group hora">
+                        <label for="hora" name="hora" class="form-label">Hora:</label>
+                        <input class="form-input" type="time" id="hora" name="hour">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="people" id="cantidadgente" class="form-input" placeholder="" max="15">
+                        <label for="cantidadgente" class="form-label">Cantidad de personas:</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="phone" id="telefono" class="form-input" placeholder="">
+                        <label for="telefono" class="form-label">Telefono:</label>
+                    </div>
+                </div>
+                <p class="error">Formulario incompleto</p>
+                <input type="submit" id="Modificar" class="form-submit" value="Actualizar">
+            </form>
+        </section>
+        <section class="table">
+            <div class="row-rv">
+                <h3>Nombre</h3>
+                <h3>Sucursal</h3>
+                <h3>Fecha</h3>
+                <h3>Hora</h3>
+                <h3>Cant. de gente</h3>
+                <h3>Teléfono</h3>
+                <h3>Controles</h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="sucurales-footer">
+                <ul>
+                    <li><h5><span>Sucursales</span></h5></li>
+                    <li><h5>Av. Almte. Brown 1220</h5></li>
+                    <li><h5>av. Corrientes 1300</h5></li>
+                </ul>
+                <ul>
+                    <li><h5><span>Teléfonos</span></h5></li>
+                    <li><h5>Av. Almte. Brown 1220</h5></li>
+                    <li><h5>av. Corrientes 1300</h5></li>
+                </ul>
+        </div>
+        <span class="footer-line"></span>
+        <div class="icons-footer">
+            <div class="logo-footer"><img src="imgs/bancheroFooter.png" alt="logo Banchero"></div>
+            <div class="social">
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="imgs/icon-facebook.svg" alt=""></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="imgs/icon-whatsapp.svg" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="imgs/icon-instagram.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/indexAdmin.js"></script>
+    <script src="scripts/reservas.js"></script>
+</body>
+</html>
