@@ -47,7 +47,7 @@ app.get("/login", authorization.soloPublico, (req,res) => res.sendFile(__dirname
 app.post("/api/login", login);
 app.post("/api/register", register);
 app.get("/register", authorization.soloPublico, (req,res) => res.sendFile(__dirname + "/pages/register.html"));
-app.get("/inicio", authorization.soloPublico, (req,res) => res.sendFile(__dirname + "/pages/index.html"));
+app.get("/inicio", authorization.soloPublico, (req,res) => res.sendFile(__dirname + "/pages/incio.html"));
 app.get("/carrito", authorization.soloPublico, (req,res) => res.sendFile(__dirname + "/pages/carrito.html"));
 app.get("/contacto", authorization.soloPublico, (req,res) => res.sendFile(__dirname + "/pages/contacto.html"));
 app.get("/galeria", authorization.soloPublico, (req,res) => res.sendFile(__dirname + "/pages/galeria.html"));
