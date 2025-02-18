@@ -16,9 +16,10 @@ import { getUsers, getUser, updateUser, destroyUser } from "./controllers/user.c
 
 import { methods as authorization } from "../middlewares/authorization.js";
 
-app.set("port", 3000);
-app.listen(app.get("port"));
-console.log("Servidor correndo en puerto ", app.get("port"));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT);
+console.log("Servidor correndo en puerto ", PORT);
 
 import userRouter from "../routers/user.router.js";
 import imagenesRouter from "../routers/imagenes.router.js"
