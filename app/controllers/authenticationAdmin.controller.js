@@ -5,7 +5,7 @@ import db from "../../db/db.js";
 
 dotenv.config();
 
-import { __dirname } from "../server.js";
+import { __dirname } from "../index.js";
 
 import multer from "multer";
 import path from "path";

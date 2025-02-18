@@ -3,7 +3,7 @@ const router = express.Router();
 
 import multer from "multer";
 import path from "path";
-import { __dirname } from "../app/server.js"
+import { __dirname } from "../app/index.js"
 
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {

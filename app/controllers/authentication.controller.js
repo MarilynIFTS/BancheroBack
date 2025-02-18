@@ -5,7 +5,7 @@ import db from "../../db/db.js";
 import mysql from 'mysql2/promise';
 dotenv.config();
 
-import { __dirname } from "../server.js"
+import { __dirname } from "../index.js"
 
 export const usuarios = [{
     name: "Juan",
