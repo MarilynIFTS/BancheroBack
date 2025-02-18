@@ -4,7 +4,7 @@ let userId;
 
 const obtenerPerfil = async () => {
     try {
-        const resProtected = await fetch("http://localhost:3000/user/protected", {
+        const resProtected = await fetch("hhttps://bancheroback-production.up.railway.app/user/protected", {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${document.cookie.split("jwt=")[1]}`,
@@ -17,7 +17,7 @@ const obtenerPerfil = async () => {
 
         userId = await resProtected.json();
 
-        const res = await fetch(`http://localhost:3000/user/${userId}`, {
+        const res = await fetch(`https://bancheroback-production.up.railway.app/user/${userId}`, {
             method: "GET",
         });
 

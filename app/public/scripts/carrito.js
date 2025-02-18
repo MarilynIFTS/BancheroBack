@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
     try{
         let valor = 0;
         for (const plato of menuGuardado) {
-            const response = await fetch(`http://localhost:3000/platos/${plato.id}`, {
+            const response = await fetch(`https://bancheroback-production.up.railway.app/platos/${plato.id}`, {
                 method: "GET",
             });
             const platoData = await response.json();

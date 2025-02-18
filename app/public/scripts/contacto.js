@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
         const storedAdmin = localStorage.getItem("admin");
         console.log(storedAdmin)
             if(storedAdmin){
-                const res = await fetch("http://localhost:3000/mensajes/Datos", {
+                const res = await fetch("https://bancheroback-production.up.railway.app/mensajes/Datos", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ document.querySelector(".contacto").addEventListener("submit", async(e) =>{
         };
 
         console.log(messageData);
-        const res = await fetch("http://localhost:3000/mensajes", {
+        const res = await fetch("https://bancheroback-production.up.railway.app/mensajes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -83,7 +83,7 @@ document.querySelector(".contacto").addEventListener("submit", async(e) =>{
 
 async function deleteMessage(id){
     try{
-        const res = await fetch(`http://localhost:3000/mensajes/${id}`, {
+        const res = await fetch(`https://bancheroback-production.up.railway.app/mensajes/${id}`, {
             method: "DELETE",
         })
         if (res.ok) {

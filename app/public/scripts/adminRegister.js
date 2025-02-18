@@ -17,7 +17,7 @@ formData.forEach((value, key) => {
 console.log(formObject);
 
 
-    const res = await fetch("http://localhost:3000/admin/registerAdmin", {
+    const res = await fetch("https://bancheroback-production.up.railway.app/admin/registerAdmin", {
         method: "POST",
         body: formData,
         mode: 'cors',

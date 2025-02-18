@@ -5,7 +5,7 @@ let categoryOptions="<option>Seleccione una categoría</option>";
 async function fetchCategories(){
     let categoriesData;
     try{
-        const response = await fetch("http://localhost:3000/categorias", {
+        const response = await fetch("https://bancheroback-production.up.railway.app/categorias", {
             method: "GET",
         })
         if (!response.ok) {
@@ -47,13 +47,13 @@ async function fetchCategories(){
 async function chargeDishes(){
     let dishesData;
     try{
-        const response = await fetch("http://localhost:3000/platos", {
+        const response = await fetch("https://bancheroback-production.up.railway.app/platos", {
             method: "GET",
         })
 
         dishesData = await response.json();
 
-        const responseCateg = await fetch("http://localhost:3000/categorias", {
+        const responseCateg = await fetch("https://bancheroback-production.up.railway.app/categorias", {
             method: "GET",
         })
 
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
         
                 const formData = new FormData(e.target);
         
-                const res = await fetch("http://localhost:3000/categorias", {
+                const res = await fetch("https://bancheroback-production.up.railway.app/categorias", {
                     method: "POST",
                     body: formData,
                 })
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
 
                     if(btnAddDish.value == "+"){
                     
-                        const res = await fetch("http://localhost:3000/platos", {
+                        const res = await fetch("https://bancheroback-production.up.railway.app/platos", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
                         }
                     }else if(btnAddDish.value == "✔"){
                         console.log(dishData)
-                        const res = await fetch(`http://localhost:3000/platos/${editingDishId}`, {
+                        const res = await fetch(`https://bancheroback-production.up.railway.app/platos/${editingDishId}`, {
                             method: "PUT",
                             headers: {
                                 "Content-Type": "application/json",
@@ -256,7 +256,7 @@ document.addEventListener("click", (event) =>{
 
 async function deleteDish(id){
     try{
-        const res = await fetch(`http://localhost:3000/platos/${id}`, {
+        const res = await fetch(`https://bancheroback-production.up.railway.app/platos/${id}`, {
             method: "DELETE",
         })
         if (res.ok) {
@@ -268,7 +268,7 @@ async function deleteDish(id){
 
 async function deleteCateg(id){
     try{
-        const res = await fetch(`http://localhost:3000/categorias/${id}`, {
+        const res = await fetch(`https://bancheroback-production.up.railway.app/categorias/${id}`, {
             method: "DELETE",
         })
         if (res.ok) {
@@ -285,7 +285,7 @@ async function platosGuardados(arr) {
     try{
         let valor = 0;
         for (const plato of arr) {
-            const response = await fetch(`http://localhost:3000/platos/${plato.id}`, {
+            const response = await fetch(`https://bancheroback-production.up.railway.app/platos/${plato.id}`, {
                 method: "GET",
             });
             const platoData = await response.json();

@@ -37,7 +37,7 @@ document.querySelector(".edit-profile").addEventListener("submit", async(e) => {
     }
 
 
-        const res = await fetch(`http://localhost:3000/user/${user.IDUser}`, {
+        const res = await fetch(`https://bancheroback-production.up.railway.app/user/${user.IDUser}`, {
             method: "PUT",
             body: formData,
             mode: 'cors',

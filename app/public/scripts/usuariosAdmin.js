@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () =>{
-    const res = await fetch("http://localhost:3000/user", {
+    const res = await fetch("https://bancheroback-production.up.railway.app/user", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

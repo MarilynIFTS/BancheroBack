@@ -2,7 +2,7 @@
 const galleryContainer = document.querySelector(".galeria-container");
 document.addEventListener("DOMContentLoaded", async () =>{
     try{
-        const response = await fetch("http://localhost:3000/imagenes/gallery");
+        const response = await fetch("https://bancheroback-production.up.railway.app/imagenes/gallery");
 
         const galleryData = await response.json();
 
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
                 console.log(`${key}:`, value);
             }
 
-            const res = await fetch("http://localhost:3000/imagenes", {
+            const res = await fetch("https://bancheroback-production.up.railway.app/imagenes", {
                 method: "POST",
                 body: formData,
             })
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
 
 async function deleteImage(id){
     try{
-        const res = await fetch(`http://localhost:3000/imagenes/${id}`, {
+        const res = await fetch(`https://bancheroback-production.up.railway.app/imagenes/${id}`, {
             method: "DELETE",
         })
         if (res.ok) {

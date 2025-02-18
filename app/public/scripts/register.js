@@ -11,7 +11,7 @@ document.querySelector(".register").addEventListener("submit", async(e) => {
     formData.append("profilepic", e.target.elements.profilepic.files[0]); // Archivo
     formData.append("notifications", e.target.elements.notifications.checked ? 1 : 0);
 
-    const res = await fetch("http://localhost:3000/user/register", {
+    const res = await fetch("https://bancheroback-production.up.railway.app/user/register", {
         method: "POST",
         body: formData,
         mode: 'cors',

@@ -3,7 +3,7 @@ document.querySelector(".login").addEventListener("submit", async(e) => {
     const email = e.target.elements.email.value;
     const password = e.target.elements.password.value;
 
-    const res = await fetch("http://localhost:3000/user/login", {
+    const res = await fetch("https://bancheroback-production.up.railway.app/user/login", {
         method: "POST",
         headers:{
             "Content-Type": "application/json"

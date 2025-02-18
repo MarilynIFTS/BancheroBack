@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
         const storedAdmin = localStorage.getItem("admin");
         console.log(storedAdmin)
             if(storedAdmin){
-                const res = await fetch("http://localhost:3000/reservas/Datos", {
+                const res = await fetch("https://bancheroback-production.up.railway.app/reservas/Datos", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
             }
     }
     if(localStorage.getItem("user")){
-        const res = await fetch("http://localhost:3000/reservas/Datos", {
+        const res = await fetch("https://bancheroback-production.up.railway.app/reservas/Datos", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
             };
 
             console.log(reserveData);
-            const res = await fetch("http://localhost:3000/reservas", {
+            const res = await fetch("https://bancheroback-production.up.railway.app/reservas", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
                     Telefono
                 };
 
-                const res = await fetch(`http://localhost:3000/reservas/${editingDishId}`, {
+                const res = await fetch(`https://bancheroback-production.up.railway.app/reservas/${editingDishId}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", async () =>{
 
 async function deleteReserv(id){
     try{
-        const res = await fetch(`http://localhost:3000/reservas/${id}`, {
+        const res = await fetch(`https://bancheroback-production.up.railway.app/reservas/${id}`, {
             method: "DELETE",
         })
         if (res.ok) {
