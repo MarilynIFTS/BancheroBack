@@ -42,6 +42,8 @@ document.addEventListener("click", (event) =>{
         summaryTitle.style.height = "59vh";
         summaryTitle.style.paddingTop = "10%";
     }
+
+    return
 });
 
 btnPlus.forEach(btn => {
@@ -55,16 +57,24 @@ btnPlus.forEach(btn => {
     }
 });
 
-valor=0;
+const dishes = document.querySelectorAll(".dish");
+const items = document.querySelectorAll(".item");
+
+let valor=0;
 let valores = document.querySelectorAll(".counter-number");
-valores.forEach((cant) => {
-    valor += parseInt(cant.value, 10); 
-})
+
+if(dishes.length > 0 || items.length > 0){
+    valores.forEach((cant) => {
+        valor += parseInt(cant.value, 10); 
+    })
+}
+
 
 if(valor !== 0){
     cantCarrito.textContent = valor;
 }
-if(valor == 0){
+
+if(valor == 0 && (dishes.length > 0 || items.length > 0)){
     cantCarrito.style.display = "none"
 }
 })
@@ -72,6 +82,7 @@ if(valor == 0){
 document.addEventListener("DOMContentLoaded", async () =>{
     try{
         let valor = 0;
+        
         for (const plato of menuGuardado) {
             const response = await fetch(`https://bancheroback-production.up.railway.app/platos/${plato.id}`, {
                 method: "GET",
@@ -91,12 +102,16 @@ document.addEventListener("DOMContentLoaded", async () =>{
             </div>`
 
             const items = document.querySelector(".items");
-            items.innerHTML += itemPlato;
+            if(items){
+                items.innerHTML += itemPlato;
+            }
             valor += parseInt(plato.cant, 10);
         }
-        cantCarrito.style.display = "block";
-        cantCarrito.textContent = valor;
-        actualizarPrecios()
+
+        if(menuGuardado.length > 0){
+            cantCarrito.style.display = "block";
+            cantCarrito.textContent = valor;
+        }
     }catch{}
 })
 
@@ -104,7 +119,7 @@ const guardarPlatos = () => {
     let nuevosPlatos = [];
     const dishes = document.querySelectorAll(".dish");
     const items = document.querySelectorAll(".item");
-    if(dishes){
+    if(dishes.length > 0){
         dishes.forEach((dish) => {
             if(dish.querySelector(".counter-number")){
                 let plato = {
@@ -122,7 +137,7 @@ const guardarPlatos = () => {
             }
         })
         }
-        if(items){
+        if(items.length > 0){
             items.forEach((item) =>{
                 let plato = {
                     id: `${item.id}`,
@@ -131,7 +146,8 @@ const guardarPlatos = () => {
                 nuevosPlatos.push(plato)
             })
         }
-        if(nuevosPlatos.length !== 0){
+
+        if(nuevosPlatos.length > 0){
             localStorage.setItem("arrPlatos", JSON.stringify(nuevosPlatos));
         }
 }

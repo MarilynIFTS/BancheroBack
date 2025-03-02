@@ -31,4 +31,14 @@ input[type="file"]::file-selector-button{
 }
 
 @media screen and (max-width: 480px){
+
+    .register .form-input, .register .file, .register #sel-img {
+        width: 100%;
+    }
+
+    .form .file {
+        left: 0%;
+    }
+    
+    
 }

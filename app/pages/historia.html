@@ -9,6 +9,7 @@
     <title>Banchero</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/historia.css">
+    <link rel="stylesheet" href="styles/carrito.css">
 </head>
 <body>
     <header>
@@ -31,7 +32,10 @@
                 <button class="btn-cerrar"><a>Cerrar sesión</a><img src="imgs/icon-cerrar-sesion.svg" alt="edit icon"></button>
             </div>
             <a id="btn-login" href="login">Login</a>
-            <a class="btn-carrito" href="carrito"><img src="imgs/carrito.png" alt="carrito" id="logo-carrito"></a>
+            <div class="carrito-container">
+                <a class="btn-carrito" href="carrito"><img src="imgs/carrito.png" alt="carrito" id="logo-carrito"></a>
+                <p class="cantidad-carrito"></p>
+            </div>
             <button id="btn-menu"><img src="/imgs/iconizer-menu.svg" alt=""></button>
         </div>
     </header>
@@ -93,5 +97,6 @@ Hugo Banchero, nieto del fundador del negocio.
         </div>
     </footer>
     <script src="scripts/inicio.js"></script>
+    <script src="scripts/carrito.js"></script>
 </body>
 </html>

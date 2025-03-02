@@ -9,6 +9,7 @@
     <title>Banchero</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/carrito.css">
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -35,7 +36,10 @@
                 <button class="btn-cerrar"><a>Cerrar sesión</a><img src="imgs/icon-cerrar-sesion.svg" alt="edit icon"></button>
             </div>
             <a id="btn-login" href="login">Login</a>
-            <a class="btn-carrito" href="carrito"><img src="imgs/carrito.png" alt="carrito" id="logo-carrito"></a>
+            <div class="carrito-container">
+                <a class="btn-carrito" href="carrito"><img src="imgs/carrito.png" alt="carrito" id="logo-carrito"></a>
+                <p class="cantidad-carrito"></p>
+            </div>
             <button id="btn-menu"><img src="/imgs/iconizer-menu.svg" alt=""></button>
         </div>
     </header>
@@ -105,5 +109,6 @@
     <script src="scripts/auth.js"></script>
     <script src="scripts/slider.js"></script>
     <script src="scripts/inicio.js"></script>
+    <script src="scripts/carrito.js"></script>
 </body>
 </html>

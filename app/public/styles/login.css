@@ -160,7 +160,11 @@ main{
     }
 
     .edit-profile .form-input, .edit-profile .file, .edit-profile #sel-img{
-        width: 80%;
+        width: 100%;
+    }
+
+    .form .file {
+        left: 0%;
     }
 
     .form-title{
